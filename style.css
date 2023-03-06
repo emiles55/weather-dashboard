@@ -1,4 +1,23 @@
 body{
     background: url(weatherbackground.jpeg);
+    background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Rampart One', cursive;
+}
+html{
+    height: 100%;
+    padding: 1rem, 5rem;
+}
+#search{
+padding: 5px 10px;
+}
+#input{
+    padding: 5px 10px;
+    font-size: 25px;
+    border-radius: .5em;
+    border: solid black;
+}
+.header h1{
+    color: black;
+
 }
