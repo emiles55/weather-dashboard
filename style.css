@@ -34,3 +34,6 @@ cursor: pointer;
     padding: 1rem;
     outline-offset: 0.5rem;
   }
+  #weatherBoxDisplay{
+    display: flex;
+  }
