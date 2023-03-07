@@ -1,5 +1,5 @@
 body{
-    background: url(weatherbackground.jpeg);
+    background: url(amazingrainbow.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Rampart One', cursive;
@@ -22,7 +22,7 @@ margin-right: 20px;
 }
 .header h1{
     color: black;
-    background: linear-gradient(to right, red, orange, yellow, green,blue, indigo, violet);
+    background: linear-gradient(to right, #FCF4C9, #FEE3E2, #FBCDF2, #E8BEFA,#ABBFFF, #BBF3C0);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -49,7 +49,8 @@ to{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border: ridge 1vw;
+    border: solid 1vw;
+    border-radius: 50%;
     animation: rainbow 5s linear infinite;
   
   }
@@ -72,15 +73,15 @@ to{
     display: inline-block;
   }
   @keyframes rainbow {
-    0% { border-color: red }
-    10% { border-color: orange }
-    20% { border-color: yellow }
-    30% { border-color: green }
-    40% { border-color: blue }
-    50% { border-color: indigo }
-    30% { border-color: violet }
-    70% { border-color: red }
-    80% { border-color: orange }
-    90% { border-color: yellow }
-    100% { border-color: green }
+    0% { border-color: #FCF4C9 }
+    10% { border-color: #FEE3E2 }
+    20% { border-color: #FBCDF2 }
+    30% { border-color: #E8BEFA }
+    40% { border-color: #ABBFFF}
+    50% { border-color: #BBF3C0 }
+    30% { border-color: #FCF4C9 }
+    70% { border-color: #FEE3E2 }
+    80% { border-color: #FBCDF2  }
+    90% { border-color: #ABBFFF }
+    100% { border-color: #BBF3C0 }
   }
