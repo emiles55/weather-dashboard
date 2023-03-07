@@ -12,6 +12,7 @@ html{
 padding: 5px 10px;
 font-size: 20px;
 cursor: pointer;
+margin-right: 20px;
 }
 #input{
     padding: 5px 10px;
@@ -21,7 +22,12 @@ cursor: pointer;
 }
 .header h1{
     color: black;
+    background: linear-gradient(to right, red, orange, yellow, green,blue, indigo, violet);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 60px;
+
 
 }
 #image{
@@ -42,4 +48,8 @@ cursor: pointer;
   }
   #location, #degrees{
     font-family: 'Alumni Sans Inline One', cursive;
+  }
+  .header{
+    display: inline-block;
+
   }
