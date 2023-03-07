@@ -37,19 +37,20 @@ to{
 }
 }
 #image{
-    border: 0.5rem outset pink;
+  /*  border: 0.5rem outset pink;
     outline: 0.5rem solid khaki;
-    box-shadow: 0 0 0 2rem skyblue;
-    border-radius: 20%;
+    box-shadow: 0 0 0 2rem skyblue; */
     font: bold 1rem sans-serif;
     margin: 2rem;
-    padding: 1rem;
-    outline-offset: 0.5rem;
+ /*   padding: 1rem;*/
+  /*  outline-offset: 0.5rem;*/
     width: 120px;
     height: 120px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border: ridge 1vw;
+    animation: rainbow 5s linear infinite;
   
   }
   #weatherBoxDisplay{
@@ -62,12 +63,24 @@ to{
     font-size: 30px;
     padding: 40px;
   }
-  #location, #degrees{
+  #location, #degrees, #currentActivity{
     font-family: 'Alumni Sans Inline One', cursive;
     font-size: 30px;
     text-align: center;
   }
   .header{
     display: inline-block;
-
+  }
+  @keyframes rainbow {
+    0% { border-color: red }
+    10% { border-color: orange }
+    20% { border-color: yellow }
+    30% { border-color: green }
+    40% { border-color: blue }
+    50% { border-color: indigo }
+    30% { border-color: violet }
+    70% { border-color: red }
+    80% { border-color: orange }
+    90% { border-color: yellow }
+    100% { border-color: green }
   }
