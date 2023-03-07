@@ -37,3 +37,9 @@ cursor: pointer;
   #weatherBoxDisplay{
     display: flex;
   }
+  .boxOne, .boxTwo, .boxThree, .boxFour, .boxFive{
+    font-family: 'Alumni Sans Inline One', cursive;
+  }
+  #location, #degrees{
+    font-family: 'Alumni Sans Inline One', cursive;
+  }
