@@ -1,11 +1,11 @@
 var cityInput =$("input");
 console.log(cityInput);
 let weather={
-fetchWeather: function () {
+fetchWeather: function (city) {
     fetch(
       "https://api.openweathermap.org/data/2.5/weather?q=" +
         Denver +
-        "&units=metric&appid=" +
+        "&units=imperial&appid=" +
         "9258a0385e244fedfb9b649c2c90053a"
     )
       .then((response) => {
@@ -17,4 +17,13 @@ fetchWeather: function () {
       })
       .then((data) => console.log(data));
   }
+}
+function renderWeather(){
+
+}
+function fetchWeather(query){
+var url= "https://api.openweathermap.org/data/2.5/weather?q=" +
+query +
+"&units=imperial&appid=" +
+"9258a0385e244fedfb9b649c2c90053a"
 }
