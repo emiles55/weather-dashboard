@@ -64,13 +64,16 @@ to{
     font-size: 30px;
     padding: 40px;
   }
-  #location, #degrees, #currentActivity{
+  #location, #degrees, #currentActivity, #currentTime{
     font-family: 'Alumni Sans Inline One', cursive;
     font-size: 30px;
     text-align: center;
   }
   .header{
     display: inline-block;
+  }
+  #forecast{
+    text-decoration: underline;
   }
   @keyframes rainbow {
     0% { border-color: #FCF4C9 }

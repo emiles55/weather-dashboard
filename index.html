@@ -26,6 +26,7 @@
         <div class="weather">
             
             <p id ="location">New York, NY</p>
+            <p id ="currentTime">Time</p>
             <div class="temperature-box">
                 <div class="container">
                     <div class="top-round-rainbow">
@@ -38,7 +39,7 @@
         <section id="weatherBoxDisplay">
         <div class="boxOne">
         <div class="weatherForecast"></div>
-        <p id="forecast">Forecast:</p>
+        <p id="forecast">Day One Forecast</p>
         <div class="temp">
             <div class="upcoming">
                 <p id="date">
@@ -53,7 +54,7 @@
         </div>
         <div class="boxTwo">
         <div class="weatherForecast"></div>
-        <p id="forecast">Forecast:</p>
+        <p id="forecast">Day Two Forecast</p>
         <div class="temp">
             <div class="upcoming">
                 <img id="weatherIconTwo" alt="">
@@ -69,7 +70,7 @@
 
         <div class="boxThree">
         <div class="weatherForecast"></div>
-        <p id="forecast">Forecast:</p>
+        <p id="forecast">Day Three Forecast</p>
         <div class="temp">
             <div class="upcoming">
                 <img id="weatherIconThree" alt="">
@@ -85,7 +86,7 @@
         </div>
         <div class="boxFour">
         <div class="weatherForecast"></div>
-        <p id="forecast">Forecast:</p>
+        <p id="forecast">Day Four Forecast</p>
         <div class="temp">
             <div class="upcoming">
                 <img id="weatherIconFour" alt="">
@@ -99,20 +100,27 @@
         </div>
         <div class="boxFive">
         <div class="weatherForecast"></div>
-        <p id="forecast">Forecast:</p>
+        <p id="forecast">Day Five Forecast</p>
         <div class="temp">
             <div class="upcoming">
-                <p id="time">
+                <img id="weatherIconFive" alt="">
+                <p id="dateFive">
                     5:00PM
                 </p>
-                <p>Low:40°F, High: 50°F</p>
-            </div>
-            <p class="weatherActivity">Sunny</p>
+                <p id="dayFiveTemp">Low:40°F, High: 50°F</p>
+                <p id="humidityFive">Humidity</p>
+                <p id="windSpeedFive">Wind Speed</p>
+             
             </div>
         </div>
         
     </section>
     </main>
+    <script
+    src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+    crossorigin="anonymous"
+  ></script>
     <script type="text/javascript" src="javascript.js"></script>
 </body>
 </html>

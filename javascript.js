@@ -1,5 +1,14 @@
 
+var today = dayjs().format("dddd, MMMM D, YYYY");
+var tomorrow = dayjs().format("dddd, MMMM D, YYYY");
+var time = new Date(new Date().getTime() + 60*60*1000).toLocaleTimeString();
+timeDisplay=document.getElementById("currentTime");
+timeDisplay.textContent="Your local current time: "+time;
 
+//var year=dayjs().get('year');
+//var month= dayjs().get('month');
+//var day=dayjs().get('day');
+//console.log("${day} ${month} ${year}");
 function renderWeather(weather){
   city=document.getElementById("location");
   wind=document.getElementById("windSpeed");
@@ -15,29 +24,38 @@ function renderWeather(weather){
   windFour=document.getElementById("windSpeedFour");
   tempFour=document.getElementById("dayFourTemp");
   iconFour = document.getElementById("weatherIconFour");
-  humidFour=document.getElementById("humidityFour");
+  humidFour=document.getElementById("humidityFive");
+  windFive=document.getElementById("windSpeedFive");
+  tempFive=document.getElementById("dayFiveTemp");
+  iconFive = document.getElementById("weatherIconFive");
+  humidFive=document.getElementById("humidityFour");
   humid=document.getElementById("humidity");
   dateChange=document.getElementById("date");
   dateChangeTwo=document.getElementById("dateTwo");
   icon = document.getElementById("weatherIcon");
   date.textContent=weather.list[0].dt_txt;
   city.textContent=weather.city.name;
-  temp.textContent=weather.list[0].main.temp;
-  humid.textContent=weather.list[0].main.humidity;
-  wind.textContent=weather.list[0].wind.speed;
+  temp.textContent="Temperature: "+Math.floor(((weather.list[0].main.temp) - 273.15) * 1.8 + 32) + " °F";
+  humid.textContent="Humidity: "+weather.list[0].main.humidity+ "%";
+  wind.textContent="Wind Speed: "+weather.list[0].wind.speed+"MPH";
   icon.setAttribute("src", "https://openweathermap.org/img/wn/"+weather.list[0].weather[0].icon+"@2x.png");
-  tempTwo.textContent=weather.list[1].main.temp;
-  humidTwo.textContent=weather.list[1].main.humidity;
-  windTwo.textContent=weather.list[1].wind.speed;
+  tempTwo.textContent="Temperature: "+Math.floor(((weather.list[1].main.temp) - 273.15) * 1.8 + 32) + " °F";
+  humidTwo.textContent="Humidity: "+weather.list[1].main.humidity+ "%";
+  windTwo.textContent="Wind Speed: "+weather.list[1].wind.speed+"MPH";
   iconTwo.setAttribute("src", "https://openweathermap.org/img/wn/"+weather.list[1].weather[0].icon+"@2x.png");
-  tempThree.textContent=weather.list[2].main.temp;
-  humidThree.textContent=weather.list[2].main.humidity;
-  windThree.textContent=weather.list[2].wind.speed;
+  tempThree.textContent="Temperature: "+Math.floor(((weather.list[2].main.temp) - 273.15) * 1.8 + 32) + " °F";
+  humidThree.textContent="Humidity: "+weather.list[2].main.humidity+ "%";
+  windThree.textContent="Wind Speed: "+weather.list[2].wind.speed+"MPH";
   iconThree.setAttribute("src", "https://openweathermap.org/img/wn/"+weather.list[2].weather[0].icon+"@2x.png");
-  tempFour.textContent=weather.list[3].main.temp;
-  humidFour.textContent=weather.list[3].main.humidity;
-  windFour.textContent=weather.list[3].wind.speed;
+  tempFour.textContent="Temperature: "+Math.floor(((weather.list[3].main.temp) - 273.15) * 1.8 + 32) + " °F";
+  humidFour.textContent="Humidity: "+weather.list[3].main.humidity+ "%";
+  windFour.textContent="Wind Speed: "+weather.list[3].wind.speed+"MPH";
   iconFour.setAttribute("src", "https://openweathermap.org/img/wn/"+weather.list[3].weather[0].icon+"@2x.png");
+  tempFive.textContent="Temperature: "+Math.floor(((weather.list[4].main.temp) - 273.15) * 1.8 + 32) + " °F";
+  humidFive.textContent="Humidity: "+weather.list[4].main.humidity+ "%";
+  windFive.textContent="Wind Speed: "+weather.list[4].wind.speed+"MPH";
+  iconFive.setAttribute("src", "https://openweathermap.org/img/wn/"+weather.list[4].weather[0].icon+"@2x.png");
+  
   
 
 }
