@@ -72,7 +72,7 @@ to{
   .header{
     display: inline-block;
   }
-  #forecast{
+  #date, #dateTwo, #dateThree, #dateFour, #dateFive{
     text-decoration: underline;
   }
   @keyframes rainbow {

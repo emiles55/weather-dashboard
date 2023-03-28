@@ -1,7 +1,26 @@
 
+
+const tomorrow = dayjs().add(1, 'day');
+const tomorrowFormatted = tomorrow.format('dddd, MMMM D, YYYY');
+const day3=dayjs().add(2, 'day');
+const day3Formatted = day3.format('dddd, MMMM D, YYYY');
+console.log(tomorrowFormatted);
 var today = dayjs().format("dddd, MMMM D, YYYY");
-var tomorrow = dayjs().format("dddd, MMMM D, YYYY");
-var time = new Date(new Date().getTime() + 60*60*1000).toLocaleTimeString();
+const day4=dayjs().add(3, 'day');
+const day4Formatted = day4.format('dddd, MMMM D, YYYY');
+const day5=dayjs().add(4, 'day');
+const day5Formatted = day5.format('dddd, MMMM D, YYYY');
+addDay2=document.getElementById("dateTwo");
+addDay3=document.getElementById("dateThree");
+addDay4=document.getElementById("dateFour");
+addDay5=document.getElementById("dateFive");
+addDay2.textContent=tomorrowFormatted;
+addDay3.textContent=day3Formatted;
+addDay4.textContent=day4Formatted;
+addDay5.textContent=day5Formatted;
+dateChange=document.getElementById("date");
+date.textContent=today;
+var time = new Date(new Date().getTime()).toLocaleTimeString();
 timeDisplay=document.getElementById("currentTime");
 timeDisplay.textContent="Your local current time: "+time;
 
@@ -30,10 +49,9 @@ function renderWeather(weather){
   iconFive = document.getElementById("weatherIconFive");
   humidFive=document.getElementById("humidityFour");
   humid=document.getElementById("humidity");
-  dateChange=document.getElementById("date");
+  
   dateChangeTwo=document.getElementById("dateTwo");
   icon = document.getElementById("weatherIcon");
-  date.textContent=weather.list[0].dt_txt;
   city.textContent=weather.city.name;
   temp.textContent="Temperature: "+Math.floor(((weather.list[0].main.temp) - 273.15) * 1.8 + 32) + " °F";
   humid.textContent="Humidity: "+weather.list[0].main.humidity+ "%";
