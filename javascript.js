@@ -29,6 +29,14 @@ searchBtn.addEventListener('click', function (event) {
   } else
     fetchWeatherByInput(input.value);
 })
+document.querySelector('#input').addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    if (input.value == null) {
+      return;
+    } else
+      fetchWeatherByInput(input.value);  
+    }
+});
 
 //var year=dayjs().get('year');
 //var month= dayjs().get('month');
