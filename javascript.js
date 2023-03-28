@@ -1,3 +1,4 @@
+var previouslySearched=[];
 var searchBtn = document.getElementById('search');
 const tomorrow = dayjs().add(1, 'day');
 const tomorrowFormatted = tomorrow.format('dddd, MMMM D, YYYY');
@@ -138,4 +139,17 @@ function fetchWeatherByInput(query){
   })
   .then((data) => fetchWeatherByCoordinates(data))
   //.then((data)=>console.log(data))
+  saveSearch(query);
+  }
+  function saveSearch(query){
+    previouslySearched.push(query);
+    localStorage.setItem("query", JSON.stringify(previouslySearched));
+loadPreviousSearches();
+  }
+  function loadPreviousSearches(){
+    previouslySearched= JSON.parse(localStorage.getItem("query"));
+    if (previouslySearched == null) {
+        return;
+    }
+    console.log(previouslySearched);
   }
