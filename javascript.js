@@ -1,5 +1,4 @@
-
-
+var searchBtn = document.getElementById('search');
 const tomorrow = dayjs().add(1, 'day');
 const tomorrowFormatted = tomorrow.format('dddd, MMMM D, YYYY');
 const day3=dayjs().add(2, 'day');
@@ -23,6 +22,13 @@ date.textContent=today;
 var time = new Date(new Date().getTime()).toLocaleTimeString();
 timeDisplay=document.getElementById("currentTime");
 timeDisplay.textContent="Your local current time: "+time;
+searchBtn.addEventListener('click', function (event) {
+  event.preventDefault();
+  if (input.value == null) {
+    return;
+  } else
+    fetchWeatherByCity(input.value);
+})
 
 //var year=dayjs().get('year');
 //var month= dayjs().get('month');
@@ -78,7 +84,7 @@ function renderWeather(weather){
 
 }
 function fetchWeatherByCity(query){
-var url= "https://api.openweathermap.org/data/2.5/weather?q=" +"Denver"+
+var url= "https://api.openweathermap.org/data/2.5/weather?q=" +"Raleigh"+
 "&units=metric&appid=" +
 "9258a0385e244fedfb9b649c2c90053a";
 fetch(url)
