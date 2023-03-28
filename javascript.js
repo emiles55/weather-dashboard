@@ -27,7 +27,7 @@ searchBtn.addEventListener('click', function (event) {
   if (input.value == null) {
     return;
   } else
-    fetchWeatherByCity(input.value);
+    fetchWeatherByInput(input.value);
 })
 
 //var year=dayjs().get('year');
@@ -116,3 +116,18 @@ function fetchWeatherByCoordinates(weather){
  .then((data) => renderWeather(data))
 // .then((data) => console.log(data))
 }
+function fetchWeatherByInput(query){
+  var url= "https://api.openweathermap.org/data/2.5/weather?q=" +query+
+  "&units=metric&appid=" +
+  "9258a0385e244fedfb9b649c2c90053a";
+  fetch(url)
+  .then((response) => {
+    if (!response.ok) {
+      alert("No weather found.");
+      throw new Error("No weather found.");
+    }
+    return response.json();
+  })
+  .then((data) => fetchWeatherByCoordinates(data))
+  //.then((data)=>console.log(data))
+  }
